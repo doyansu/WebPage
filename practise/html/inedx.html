@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 網頁編碼 -->
+        <meta charset="UTF-8"/>
+        <meta name="description" content="ddd">
+        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        <title>first page</title>
+
+        <!-- style -->
+        <style>
+            h1{
+                color: red;
+            }
+            h2{
+                color: green;
+            }
+            h3{
+                color: blue;
+            }
+        </style>
+
+         <!-- 引入外部css檔案 -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <!-- 基本標籤 -->
+
+        <!-- 數字表示重要程度 h1 通常只有一個最重要 -->
+        <h1>first head</h1>
+        <!-- <b>粗體，<i>斜體 -->
+        <p>first <i><b>content</b></i> </p>
+        <!-- <br/>換行，無內容前後標籤可合併-->
+        <br/>
+        <!-- 斜線換行 -->
+        <hr/>
+
+        <!-- 連結 & 圖片 -->
+
+        <!-- href 為 a 標籤的屬性 -->
+        <a href="https://google.com" target="_blank">google</a><br/>
+        <!-- 連結網站內分頁、檔案 -->
+        <a href="res/img/test.png">image</a><hr/>
+        <a href="pages/page2.html"><h2>second page</h2></a><br/>
+        <a href="pages/page3.html"><h2>third page</h2></a><br/>
+        <a href="pages/classId.html"><h2>class</h2></a><br/>
+        
+
+        <!-- 圖片 width 、 height 可條寬高 -->
+        <img src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-6/273221646_611912670291102_3807223406526442033_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=FDDPQsvip-UAX_z_HF3&_nc_ht=scontent.ftpe7-1.fna&oh=00_AT93b7odMVrJABYcHOBbi6lcTCZEih79u8dSmbnun9oTxg&oe=62BF9DBD" width="400" height="400"/>
+        <!-- alt 無法顯示文字 -->
+        <img src="res/img/test.png" width="400" height="400" alt="error"/><hr/>
+
+        <!-- 影片 & 嵌入youtube影片 -->
+
+        <!-- controls 可增加控制音量等工具 -->
+        <video src="res/video/testVideo.mkv" controls width="600">video</video><br/>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CLUPkcLQm64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>youtube video</iframe><hr/>
+
+        <!-- 列表 & 表格 -->
+
+        <!-- ul 前面點點 -->
+        <ul>
+            <li>google</li>
+            <li>facebook</li>
+            <li>ig</li>
+            <li>ptt</li>
+        </ul>
+        <!-- ol 數字排序 -->
+        <ol>
+            <li>google</li>
+            <li>facebook</li>
+            <li>ig</li>
+            <li>ptt</li>
+        </ol>
+        <!-- ol 字母排序 -->
+        <ol type="A">
+            <li>google</li>
+            <li>facebook</li>
+            <li>ig</li>
+            <li>ptt</li>
+        </ol><hr/>
+
+        <!-- 表格 -->
+        <table>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </table><hr/>
+
+        <!-- 容器 div & span -->
+        <div style="color: red;">
+            <ul>
+                <li>google</li>
+                <li>facebook</li>
+                <li>ig</li>
+                <li>ptt</li>
+            </ul>
+            <ol>
+                <li>google</li>
+                <li>facebook</li>
+                <li>ig</li>
+                <li>ptt</li>
+            </ol>
+            <ol type="A">
+                <li>google</li>
+                <li>facebook</li>
+                <li>ig</li>
+                <li>ptt</li>
+            </ol><hr/>
+        </div>
+
+        <span>span1</span>
+        <span>span2</span>
+        <div>div1</div>
+        <div>div2</div><hr/>
+
+        <!-- 輸入 -->
+        <input type="text" placeholder="123"><br>
+        <input type="password" placeholder="123"><hr>
+        <input type="button"><br>
+        <input type="radio"><br>
+        <input type="file"><br>
+        <input type="checkbox"><br>
+        <textarea cols="30" rows="10">textarea</textarea>
+
+        <!-- css -->
+        <!-- 顏色可以用色碼、RGB等表示 -->
+        <div style="color: red;">
+            <p style="color: blue;">css1</p> 
+            <p style="border: 5px dashed green;">css2</p> 
+        </div>
+
+        <!-- padding & margin (填充、邊距) -->
+        <!-- margin可負值 -->
+        <div style="padding: 20px 30px 40px 50px; border: 10px solid; margin: 20px; background-color: lightblue;">
+            <p style="color: blue;">csscsscsscsscss</p> 
+        </div>
+
+        <!-- float & display --> 
+        <p>float</p>
+        <img src="res/img/test.png" width="200px" style="float:left;"/>
+        <p>floatfloatfloatfloatfloatfloatfloatfloatfloatfloat</p>
+
+        <!-- block -->
+        <p style="display: inline;">p1</p>
+        <p style="display: inline;">p2</p>
+        <!-- inline -->
+        <span style="display: block;">span1</span>
+        <span style="display: block;">span2</span>
+
+        <!-- position (定位) -->
+        <div style="height: 400px;">
+            <div style="position: fixed; top: 0px; right: 0px; width: 80px; height: 80px; background-color: blue;"></div>
+            <div style="position: relative; top: 100px; width: 80px; height: 80px; background-color: blue;"></div>
+        </div>
+
+        <div style="position: relative; padding: 30px; border: 5px solid red;">
+            <div style="position: relative; padding: 30px; border: 5px solid red;">
+                <div style="position: absolute; top: 0px; right: 0px; width: 40px; height: 40px; background-color: blue;"></div>
+            </div>
+        </div>
+
+        <!-- opacity & border-radius (透明、圓弧)-->   
+        <p style="position:relative ; top: 65px; left: 25px;">opacity</p>
+        <div style="opacity:0.5; border-radius: 20px 30px 40px 50px; width: 80px; height: 80px; background-color: blue;"></div>
+
+        <!-- style -->
+        <h1>style</h1>
+        <h2>style</h2>
+        <h3>style</h3>
+
+    </body>
+</html>

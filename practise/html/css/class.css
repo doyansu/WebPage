@@ -1,0 +1,127 @@
+/* class */
+.food
+{
+    color: red;
+}
+
+.person
+{
+    color: blue;
+}
+
+.background-gery
+{
+    background-color: grey;
+}
+
+/* id */
+#css-h1
+{
+    color: yellow;
+    background-color: grey;
+}
+
+/* 全部套用 */
+*
+{
+    color: #000;
+}
+
+/* 先找 ul 再找 li */
+ul li
+{
+    background-color: grey;
+}
+
+/* 先找 ul 再找 a */
+ul a
+{
+    color: blue;
+}
+
+/* 擁有type屬性 */
+[type]
+{
+    color: yellow;
+    background-color: grey;
+}
+
+/* 滑鼠滑過 */
+p:hover, #css-h1:hover, [type]:hover
+{
+    background-color: green;
+}
+
+
+/* flex */
+.container
+{
+    display: flex;
+    /* 換行 */
+    flex-wrap: wrap;  
+    /* 由上而下 */
+    flex-direction: column;
+    height: 300px;
+    border: 5px solid red;
+    /* 置中 */
+    justify-content: center;
+
+}
+
+.container div
+{
+    border: 1px solid rgb(202, 201, 201);
+    padding: 10px;
+    width: 100px;
+}
+
+.box-1
+{
+    /*填滿*/
+    /*flex: 1;*/
+    order: 3;
+}
+
+.box-2
+{
+    /*flex: 2;*/
+    order: 2;
+}
+
+.box-3
+{
+    /*flex: 3;*/
+    order: 1;
+}
+
+/* animation */
+@keyframes change-color
+{
+    /*from {background-color: red;}
+    to {background-color: blue;}*/
+
+    0% {background-color: red; top: 10px; left: 10px;}
+    20% {background-color: blue; top: 20px; left: 20px;}
+    40% {background-color: red; top: 30px; left: 30px;}
+    60% {background-color: blue; top: 40px; left: 40px;}
+    80% {background-color: red; top: 50px; left: 50px;}
+    100% {background-color: blue; top: 60px; left: 60px;}
+}
+
+.box
+{
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+    position: relative;
+}
+
+.box-animation:hover
+{
+    animation-name: change-color;
+    animation-duration: 2s;
+    /* 做幾次 */
+    animation-iteration-count: infinite;
+    /* 網頁載入後過幾秒開始，加入hover變成碰幾秒*/
+    animation-delay: 0.5s;
+}
