@@ -1,17 +1,16 @@
 # 筆記
-## 套件
+## VScode 套件
 - Quokka.js
 
 ---
 
-## 安裝 
-### `typescript compiler`
-在 terminal 下指令 
+## 安裝 TypeScript compiler
+在 terminal 下指令 ( 需先安裝 [node.js](https://nodejs.org/zh-tw/download/) )
 
-```properties
+```ps
 $ npm install -g typescript
 ```
-```properties
+```ps
 $ tsc --init
 ```
 
@@ -19,18 +18,18 @@ $ tsc --init
 
 ( `npm` 將套件安裝到本地 、 `npx` 套件使用完會刪除，適用於不常用套件 )
 
-```properties
+```ps
 $ npx tsc --init
 ```
 將 `ts` 編譯成 `js` 檔案使用 `tsc` 指令 ( 如無法一樣嘗試在前面加入 `npx` )
 
-```properties
+```ps
 $ tsc
 ```
     
 ---
 
-## 操作
+## TypeScript 操作
 對 name 按 F2 可直接改掉全部用到該物件屬性的名稱
 
 ```javaScript
