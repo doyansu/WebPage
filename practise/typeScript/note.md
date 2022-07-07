@@ -30,12 +30,40 @@ $ tsc
 ---
 
 ## TypeScript 操作
-對 name 按 F2 可直接改掉全部用到該物件屬性的名稱
+
+使用 `Shift` + `Ctrl` + `p` 快捷下命令來建立、執行 `TypeScript` 檔案。
+```shell
+Quokka.js: New TypeScript File
+Quokka.js: Start on Current File
+```
+
+對 name 按 `F2` 可直接改掉全部用到該物件屬性的名稱
 
 ```javaScript
 const person = {
     name: 'Amos'
 }
+```
+對函式按 `F12` 可直接跳到定義
+
+```typeScript
+function abc() {
+    return 'abc';
+}
+
+const b = abc();
+```
+
+在 `js` 檔案最上方加入標籤可變為 `TypeScript` 檢查模式 ( 僅限 `vscode` )
+
+```ts
+// @ts-check
+```
+`TypeScript` 特有寫法可限定變數可接受型別。
+
+```ts
+let m : string | number = 1;
+m = '1';
 ```
 
 ---
