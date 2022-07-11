@@ -17,6 +17,13 @@
   - [基本輸出入 IO](#基本輸出入-io)
   - [陣列 array](#陣列-array)
   - [函式 function](#函式-function)
+  - [判斷 if](#判斷-if)
+  - [迴圈 while for](#迴圈-while-for)
+  - [物件 object](#物件-object)
+  - [類別 class](#類別-class)
+  - [取得 html 元素](#取得-html-元素)
+  - [事件監聽 event listener](#事件監聽-event-listener)
+  - [參考影片](#參考影片)
 
 ---
 ## 撰寫 JavaScript
@@ -150,6 +157,12 @@ prompt("input");
 document.write("output");
 ```
 
+debug
+
+```js
+console.log("message");
+```
+
 ---
 
 ## 陣列 array
@@ -160,6 +173,16 @@ document.write("output");
 var scores = [20, 50, 60, 440, 90];
 var names = ["John", "Joe", "Max"];
 var diff = [20, "Joe", true];
+```
+
+二維陣列
+
+```js
+var numbers = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
 ```
 
 ---
@@ -196,3 +219,176 @@ var sum = add(3, 7);
 ```
 
 ---
+
+## 判斷 if
+
+基本同 `c++` 
+
+```js
+if() {
+
+}
+else if() {
+
+}
+else {
+
+}
+```
+
+---
+
+## 迴圈 while for
+
+基本同 `c++` <br>
+
+while
+```js
+var i = 6;
+while(i > 0) {
+    i--;
+}
+```
+
+for
+```js
+for(var i = 0; i < 10; i++) {
+
+}
+```
+
+巢狀迴圈
+```js
+for(var i = 0; i < 10; i++) {
+    for(var j = 0; j < 10; j++) {
+
+    }
+}
+```
+
+---
+
+## 物件 object
+
+可儲存多個鍵值對。
+
+```js
+var person = {
+    name:"joe",
+    age:20,
+    is_male:true
+};
+```
+
+取得屬性。
+
+```js
+var person = {
+    name:"joe",
+    age:20,
+    is_male:true
+};
+
+document.write(person.name);
+```
+
+---
+
+## 類別 class
+
+物件模板，定義建構子、方法、屬性。
+```js
+class Phone {
+    constructor(number, year, is_waterproof) {
+        this.number = number;
+        this.year = year;
+        this.is_waterproof = is_waterproof;
+    }
+
+    phone_age() {
+        return 2021 - this.year;
+    }
+}
+
+var phone1 = new Phone("123", 2020, false);
+var phone2 = new Phone("456", 2022, false);
+
+document.write(phone1.number);
+document.write(phone2.phone_age());
+```
+
+---
+
+## 取得 html 元素
+
+`window` 為全域物件。
+```js
+window.document.write();
+```
+
+透過 `id` 取得 `html` 元素並更改。
+
+```html
+<h1 id="header"> test </h1>
+```
+
+```js
+var h1 = document.getElementById("header");
+h1.innerText = "new Text";
+```
+
+---
+
+## 事件監聽 event listener
+1.寫在 `html`、`javaScript` 內<br>
+`button` 標籤內加入 `onclick` 元素定義點擊觸發事件。
+```html
+<button id="btn" onclick="handle_click()">listener test</button>
+<script src="../js/script.js">
+```
+
+事件觸發寫在 js 內。
+
+```js
+function handle_click() {
+    alert("event listener");
+}
+```
+
+處發函式內加入 `this` 將 `button` 物件傳入。
+
+```html
+<button id="btn" onclick="handle_click(this)">listener test</button>
+<script src="../js/script.js">
+```
+
+命名為 element 進行變更。
+
+```js
+function handle_click(element) {
+    element.style.color = "red";
+}
+```
+
+2.全寫在 `javaScript` 內
+
+```html
+<button id="btn" onclick="handle_click(this)">listener test</button>
+<script src="../js/script.js">
+```
+
+使用 `getElementById` 取得物件，再用 `addEventListener` 監聽，使用 `this` 操作 button。
+
+```js
+var btn = document.getElementById("btn");
+btn.addEventListener("click", function() {
+    alert("method2");
+    this.style.color = "red";
+})
+```
+
+---
+
+## 參考影片
+
+[【javascript】3小時初學者教學](https://www.youtube.com/watch?v=yZwlW5INhgk&t=128s)
