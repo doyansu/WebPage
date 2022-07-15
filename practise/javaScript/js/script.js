@@ -9,9 +9,9 @@ var diff = [20, "Joe", true];
 
 // object
 var person = {
-    name:"joe",
-    age:20,
-    is_male:true
+    name: "joe",
+    age: 20,
+    is_male: true
 };
 
 document.write(person.name);
@@ -48,7 +48,7 @@ function handle_click(element) {
 
 // method2
 var btn = document.getElementById("btn");
-btn.addEventListener("click", function() {
+btn.addEventListener("click", function () {
     alert("method2");
     this.style.color = "red";
 })
