@@ -3,12 +3,7 @@
 <!-- 回頂部 -->
 [<div style="position: fixed; bottom: 0px; right: 0px;">頂部</div>](#angular-練習)
 
-<!-- 標題顏色 -->
-<style>
-h1, h2, h3{
-    color: #f5ffaa;
-}
-</style>
+<link rel="stylesheet" href="../markdown/css/markdown-angular.css">
 
 ## 目錄
 - [Angular 練習](#angular-練習)
